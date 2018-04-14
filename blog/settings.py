@@ -74,7 +74,7 @@ DATABASES_AWS = {
         'NAME': 'sumitc91paytmpostgresinstance',
         'USER': 'sumitc91_paytm_postgres_instance',
         'PASSWORD': 'sumitc91paytm',
-        'HOST': 'arn:aws:rds:us-east-2:145537068148:db:sumitc91paytmpostgresinstance',
+        'HOST': 'sumitc91paytmpostgresinstance.cmfxc7scgwzx.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
