@@ -59,13 +59,27 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
+DATABASES_LOCAL = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+DATABASES_AWS = {
+
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'treebo',
+        'NAME': 'sumitc91paytmpostgresinstance',
+        'USER': 'sumitc91_paytm_postgres_instance',
+        'PASSWORD': 'sumitc91paytm',
+        'HOST': 'arn:aws:rds:us-east-2:145537068148:db:sumitc91paytmpostgresinstance',
+        'PORT': '5432',
+    }
+}
+
+DATABASES = DATABASES_AWS
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
